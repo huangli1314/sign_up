@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",scans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color:#fff;
+}
+.background{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 25px 13%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: nowrap;
+}
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #fff;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    bottom: -5px;
+    border-radius: 5px;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+}
+.navbar a:hover::after{
+    transform: scale(0.95,0.95);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.search-bar input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 12px;
+    padding-right:3px;
+}
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 20px;
+    transition: all 0.5s ease ;
+}
+.search-bar button i:hover{
+    transform: scale(1.1,1.1);
+}
+.search-bar input::placeholder{
+    color: #fff;
+    font-size: 18px;
+}
+.container{
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    height: 550px;
+    margin-top: 20px;
+    background-color:transparent;
+    border-radius: 20px;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 30px rgb(53, 53, 53);
+    border: rgb(53, 53, 53) 1px solid;
+}
+.container .logo{
+    color: #fff;
+}
+.item{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 58%;
+    height: 80%;
+    color: #fff;
+    margin: 0;
+    background-color:transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 300px;
+    background-color:transparent;
+}
+.logo  h2{
+    padding-left: 80px;
+    padding-top:20px ;
+    font-size: 35px;
+}
+.social-icon a {
+    color:#fff;
+    font-size: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.social-icon a i{
+    transition: all 0.5s ease 0.2s;
+}
+.social-icon a i:hover{
+    transform: scale(1.2,1.2);
+}
+.container .login-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: #fff;
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    border-radius:  0px 20px 20px 0px;
+}
+.login-section .form-box{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.login-section .form-box h1{
+    text-align: center;
+    font-size: 40px;
+}
+.form-box .input-box{
+    width:300px;
+    height:50px;
+    margin-top: 20px;
+    position: relative;
+}
+.form-box input.login{
+    width: 100%;
+    height:100%;
+    font-size: 18px;
+    border: rgb(157, 157, 157) 3px solid;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 15px;
+    padding-right:3px;
+    background-color: transparent;
+}
+.input-box i{
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    top:10px;
+}
+.input-box span{
+    font-size: 18px;
+    position: absolute;
+    left:15px;
+    top:10px;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.input-box input.login:valid ~ span,
+.input-box input.login:focus ~ span{
+    color: chartreuse;
+    transform: translateX(10px) translateY(-7px);
+}
+.remember-password{
+    font-size: 14px;
+    width:300px;
+    margin-top: 7px;
+    position:relative
+}
+.remember-password label{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.remember-password a{
+    position: absolute;
+    color: #fff;
+    right: 5px;
+    text-decoration: none;
+}
+.remember-password a:hover{
+    text-decoration:underline;
+}
+.remember-password label input{
+    cursor: pointer;
+    accent-color: black;
+    transform: translateY(2px);
+}
+.btn{
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0px 0px 4px black;
+    transition: all 0.5s ease 0.2s;
+}
+.btn span{
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s ease 0.2s;
+    font-family: "微软雅黑";
+}
+.btn span::after{
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: all 0.5s ease 0.2s;
+}
+.btn:hover span{
+    padding-right: 33px;
+}
+.btn:hover{
+    background-color: rgb(157, 157, 157);
+}
+.btn:hover span::after{
+    opacity: 1;
+    right: 0;
+}
+.create-account{
+    margin-top: 25px;
+}
+.create-account p{
+    text-align: center;
+    font-size: 14px;
+}
+.create-account p a{
+    color: #fff;
+    text-decoration: none;
+}
+.create-account p a:hover{
+    text-decoration: underline;
+}
+.ftr{
+    background-color:transparent;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    color: #fff;
+}
